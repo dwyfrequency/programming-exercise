@@ -14,6 +14,6 @@
     "clearMocks": true
   },
   "scripts": {
-    "test": "jest --watch --coverage"
+    "test": "jest --watchAll --coverage"
   }
 }
