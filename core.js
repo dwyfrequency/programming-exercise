@@ -30,7 +30,7 @@ const jsonToCSV = async (
   fieldNames = [`BillOfLading,Invoice,ItemNumber,Quantity`]
 ) => {
   try {
-    const { reverse = null, caps = null } = config;
+    const { reverse = false, caps = false } = config;
     const fileContents = await readFile(fileName);
     const jsonData = JSON.parse(fileContents);
     const rows = extractRows(jsonData);
