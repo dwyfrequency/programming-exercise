@@ -13,7 +13,7 @@ const rowToCSV = arr => `${arr.join(',')}\n`;
 // string -> string
 const capitalize = str => str.toUpperCase();
 
-// invert order of orders
+// invert order of rows
 // [array] -> [array]
 const invertRows = rows => {
   return rows.reverse();

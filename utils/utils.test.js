@@ -37,11 +37,11 @@ describe('utils', () => {
       });
 
       describe('invertRows', () => {
-        test('should invert the order of the rows in the subarray', () => {
+        test('#1 should invert the order of the rows in the subarray', () => {
           const nestedArr = [[1, 2], [3, 4]];
           expect(invertRows(nestedArr)).toEqual([[3, 4], [1, 2]]);
         });
-        test('should invert the order of the rows in the subarray', () => {
+        test('#2 should invert the order of the rows in the subarray', () => {
           const nestedArr = [['ba', 1], [3, 'cd']];
           expect(invertRows(nestedArr)).toEqual([[3, 'cd'], ['ba', 1]]);
         });
@@ -53,12 +53,12 @@ describe('utils', () => {
           ['r0cd0', 'r0cd1', 'r0cd2', 4],
           ['r1cd0', 'r1cd1', 'r1cd2', 5],
         ];
-        test('should combine header and rows into single string', () => {
+        test('#1 should combine header and rows into single string', () => {
           expect(stringifyData(headers, rows)).toBe(
             `Col1,Col2,Col3\nr0cd0,r0cd1,r0cd2,4\nr1cd0,r1cd1,r1cd2,5\n`
           );
         });
-        test('should capitalize rows of string when cap param passed', () => {
+        test('#2 should capitalize rows of string when cap param passed', () => {
           expect(stringifyData(headers, rows, true)).toBe(
             `Col1,Col2,Col3\nR0CD0,R0CD1,R0CD2,4\nR1CD0,R1CD1,R1CD2,5\n`
           );
